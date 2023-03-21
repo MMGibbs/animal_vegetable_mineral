@@ -1,0 +1,58 @@
+using System;
+
+public class HelloWorld
+{
+    public static string playerName = "Console.ReadLine()";
+    public static string wordType = " ";
+    public static string animalName = " ";
+    public static void Main(string[] args)
+    {
+        
+        start();
+        
+        
+    }
+    
+    public static void start()
+    {
+        Console.WriteLine("Welcome to Animal, Vegetable or Mineral! Guess what the computer is thinking of to win!");
+        Console.WriteLine("");
+        Console.WriteLine("Enter a username: ");
+        playerName = Console.ReadLine();
+        Console.WriteLine("Hi {0}! Preparing...", playerName);
+        Console.WriteLine(" ");
+        generateType();
+    }
+        
+    public static void generateType()
+    {
+        Console.WriteLine("Picking word type...");
+        Random random = new Random();
+        int randomNumber = random.Next(1,4);
+        
+        switch (randomNumber)
+        {
+            case 1:
+                wordType = "animal";
+                generateAnimal();
+            break;
+            case 2:
+                wordType = "vegetable";
+            break;    
+            case 3:
+                wordType = "mineral";
+            break;
+        }
+        
+    }
+    
+    public static void generateAnimal()
+    {
+        // use a switch statement to decide what the animal is 
+        switch (10){
+            case 0:
+                
+            break;
+        }
+    }
+}
